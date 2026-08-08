@@ -16,7 +16,7 @@
                 color: #333;
             }
             .container {
-                max-width: 1080px;
+                max-width: 1200px;
                 margin: 0 auto;
                 background: #fff;
                 padding: 30px;
@@ -44,7 +44,6 @@
                 font-weight: 600;
             }
             
-            /* KIS Rating 원본 테이블 스타일 복제 */
             .kis-table-wrap {
                 width: 100%;
                 overflow-x: auto;
@@ -59,19 +58,21 @@
                 background-color: #f2f5f9;
                 color: #1a2b4c;
                 font-weight: 700;
-                padding: 12px 10px;
+                padding: 12px 8px;
                 border-bottom: 1px solid #c8d1de;
                 border-right: 1px solid #e1e4e8;
                 text-align: center;
+                white-space: nowrap;
             }
             table.kis-table th:last-child {
                 border-right: none;
             }
             table.kis-table td {
-                padding: 12px 10px;
+                padding: 10px 8px;
                 border-bottom: 1px solid #e8ecf0;
                 border-right: 1px solid #f0f2f5;
                 color: #444;
+                text-align: center;
             }
             table.kis-table td:last-child {
                 border-right: none;
@@ -80,12 +81,10 @@
                 background-color: #f8fafc;
             }
             
-            /* 열별 정렬 및 강조 스타일 */
-            .col-company { text-align: left; font-weight: 600; color: #111; padding-left: 15px !important; }
-            .col-type { text-align: left; color: #1d4ed8; font-weight: 600; }
-            .col-rating { text-align: center; font-weight: 700; color: #0055aa; }
-            .col-outlook { text-align: center; }
-            .col-date { text-align: center; color: #666; font-family: 'Segoe UI', Tahoma, sans-serif; }
+            .col-company { text-align: left !important; font-weight: 600; color: #111; padding-left: 12px !important; }
+            .col-type { text-align: left !important; color: #1d4ed8; font-weight: 500; }
+            .col-rating-cur { font-weight: 700; color: #0055aa; }
+            .col-date { color: #666; font-family: 'Segoe UI', Tahoma, sans-serif; }
             
             .footer-notes {
                 margin-top: 15px;
@@ -99,18 +98,20 @@
         <div class="container">
             <div class="header-title">
                 <span>📊 한국신용평가 주요등급공시 (회사채)</span>
-                <span class="sub-info">회사채 건수: 16건</span>
+                <span class="sub-info">공시 건수: 16건</span>
             </div>
 
             <div class="kis-table-wrap">
                 <table class="kis-table">
                     <thead>
                         <tr>
-                            <th style="width: 28%;">기업명/수량기관</th>
-                            <th style="width: 24%;">평가종류</th>
-                            <th style="width: 14%;">평가등급</th>
-                            <th style="width: 18%;">등급전망/감시덕목</th>
-                            <th style="width: 16%;">공시일자</th>
+                            <th style="width: 20%;">회사명</th>
+                            <th style="width: 18%;">채권종류</th>
+                            <th style="width: 12%;">평가종류</th>
+                            <th style="width: 16%;">직전등급/outlook</th>
+                            <th style="width: 16%;">현재등급/outlook</th>
+                            <th style="width: 10%;">평가일</th>
+                            <th style="width: 8%;">리포트</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -118,129 +119,161 @@
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">제이비우리캐피탈</td>
-                            <td class="col-rating">SB</td>
-                            <td class="col-outlook">본</td>
+                            <td>SB</td>
+                            <td>본</td>
+                            <td class="col-rating-cur"></td>
                             <td class="col-date"></td>
+                            <td>AA-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">한국철도공사</td>
-                            <td class="col-rating">PFB</td>
-                            <td class="col-outlook">본</td>
+                            <td>PFB</td>
+                            <td>본</td>
+                            <td class="col-rating-cur"></td>
                             <td class="col-date"></td>
+                            <td>AAA</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">한국투자증권</td>
-                            <td class="col-rating">SB</td>
-                            <td class="col-outlook">본</td>
+                            <td>SB</td>
+                            <td>본</td>
+                            <td class="col-rating-cur"></td>
                             <td class="col-date"></td>
+                            <td>AA</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">한화위탁관리부동산투자회사</td>
-                            <td class="col-rating">SECB</td>
-                            <td class="col-outlook">정기</td>
-                            <td class="col-date">AA-</td>
+                            <td>SECB</td>
+                            <td>정기</td>
+                            <td class="col-rating-cur">AA-</td>
+                            <td class="col-date"></td>
+                            <td>AA-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company">안정적</td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">교보생명보험</td>
-                            <td class="col-rating">HB</td>
-                            <td class="col-outlook">본</td>
+                            <td>HB</td>
+                            <td>본</td>
+                            <td class="col-rating-cur"></td>
                             <td class="col-date"></td>
+                            <td>AA</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">인천교통공사</td>
-                            <td class="col-rating">PFB</td>
-                            <td class="col-outlook">본</td>
+                            <td>PFB</td>
+                            <td>본</td>
+                            <td class="col-rating-cur"></td>
                             <td class="col-date"></td>
+                            <td>AA+</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">한화</td>
-                            <td class="col-rating">SB</td>
-                            <td class="col-outlook">수시</td>
+                            <td>SB</td>
+                            <td>수시</td>
+                            <td class="col-rating-cur"></td>
                             <td class="col-date"></td>
+                            <td>A+</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type">농협금융지주</td>
-                            <td class="col-rating">SB</td>
-                            <td class="col-outlook">본</td>
+                            <td>SB</td>
+                            <td>본</td>
+                            <td class="col-rating-cur"></td>
                             <td class="col-date"></td>
+                            <td>AAA</td>
                         </tr>
         
                         <tr>
                             <td class="col-company"></td>
                             <td class="col-type"></td>
-                            <td class="col-rating">안정적</td>
-                            <td class="col-outlook">None</td>
-                            <td class="col-date">None</td>
+                            <td>안정적</td>
+                            <td>-</td>
+                            <td class="col-rating-cur">-</td>
+                            <td class="col-date">-</td>
+                            <td>-</td>
                         </tr>
         
                     </tbody>
