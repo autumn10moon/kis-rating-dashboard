@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>한국신용평가 실시간 등급공시 대시보드</title>
+        <title>한국신용평가 실시간 등급공시</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
             @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
@@ -14,26 +14,26 @@
     <body class="bg-slate-100 text-slate-800 p-4 sm:p-8 font-sans min-h-screen">
         <div class="max-w-7xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
             
-            <!-- Header Bar -->
+            <!-- 상단 헤더 -->
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
                 <div>
                     <h1 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
                         📊 한국신용평가 실시간 등급공시
                     </h1>
-                    <p class="text-xs text-slate-500 mt-1">회사채, 기업어음, 전자단기사채 등 신용평가 공시 현황</p>
+                    <p class="text-xs text-slate-500 mt-1">회사채, 기업어음(CP), 전자단기사채 등 각 종목별 공시 정보</p>
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="text-xs bg-emerald-50 text-emerald-600 border border-emerald-200 px-3 py-1.5 rounded-full font-semibold flex items-center gap-1.5">
-                        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> 실시간 데이터 연동됨
+                        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> 실시간 수집 완료
                     </span>
-                    <span class="text-xs text-slate-400 bg-slate-100 px-3 py-1.5 rounded-full">
+                    <span class="text-xs text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full">
                         수집 건수: <strong>106</strong>건
                     </span>
                 </div>
             </div>
 
-            <!-- Table View -->
-            <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <!-- 데이터 테이블 -->
+            <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs">
                 <table border="1" class="dataframe w-full text-left text-xs sm:text-sm border-collapse divide-y divide-slate-200">
   <thead>
     <tr style="text-align: right;">
@@ -1540,29 +1540,30 @@
 </table>
             </div>
 
-            <!-- Footer -->
-            <div class="mt-6 text-right text-xs text-slate-400">
-                Data Source: KIS Rating (https://www.kisrating.com)
+            <!-- 하단 안내 -->
+            <div class="mt-4 flex justify-between items-center text-xs text-slate-400">
+                <span>※ 회사채, 기업어음 등 각 종목 정보는 원본 공시 기준입니다.</span>
+                <span>Data Source: KIS Rating</span>
             </div>
         </div>
 
         <script>
-            // HTML 테이블 디자인 자동 보정 (헤더 및 행 스타일링)
+            // 표 헤더 및 열 스타일 자동 커스텀
             document.addEventListener("DOMContentLoaded", () => {
                 const table = document.querySelector("table");
                 if (table) {
                     const thead = table.querySelector("thead");
                     if (thead) {
-                        thead.className = "bg-slate-100 text-slate-700 font-bold uppercase tracking-wider text-xs border-b border-slate-200";
+                        thead.className = "bg-slate-100 text-slate-700 font-bold uppercase text-xs border-b border-slate-200";
                         thead.querySelectorAll("th").forEach(th => {
-                            th.className = "py-3.5 px-4 text-left font-semibold";
+                            th.className = "py-3.5 px-4 text-left font-bold";
                         });
                     }
                     const tbody = table.querySelector("tbody");
                     if (tbody) {
                         tbody.className = "divide-y divide-slate-100 bg-white";
                         tbody.querySelectorAll("tr").forEach(tr => {
-                            tr.className = "hover:bg-slate-50 transition-colors";
+                            tr.className = "hover:bg-blue-50/50 transition-colors";
                             tr.querySelectorAll("td").forEach(td => {
                                 td.className = "py-3 px-4 text-slate-700 whitespace-nowrap";
                             });
